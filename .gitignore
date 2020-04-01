@@ -7,7 +7,8 @@
 
 # User-specific files
 .Ruserdata
-
+DARplot.Rproj
+.gitignore
 # Example code in package build process
 *-Ex.R
 
