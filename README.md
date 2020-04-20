@@ -1,16 +1,16 @@
 # DARplot
-##A high-quality visualization of three genetic models plots using genome-wide association data
+## A high-quality visualization of three genetic models plots using genome-wide association data
 
-#Installation
+# Installation
 
-#Usage
+# Usage
 
-#Basic Manhattan plot
+# Basic Manhattan plot
 
-#TheraDarplot
+# TheraDarplot
 
-#Plotting multiple GWAS studies
+# Plotting multiple GWAS studies
 
-#Details
+# Details
 
-#Tabling
+# Tabling
