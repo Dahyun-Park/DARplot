@@ -6,6 +6,11 @@ the significant and replicative results and reduce the substantial loss of power
 we implemented a R package named 
 **TheraDARPLOT** **(Dominance, Additive and Recessive combined Plot).** 
 
+**Availability**: TheraDARPLOT is available for free (under the GNU General Public License V3) from git-hub and from the CRAN R package repository cran.r-project.org/web/packages/ TheraDARPLOT /.
+**Contact : kyungwon.hong@theragenetex.com or dahyun.park@theragenetex.com**
+Supplementary information : Supplementary data and available at Bioinformatics online.
+
+
 ## Introduction
 The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
 ![new_dm.png](new_dm.png)
