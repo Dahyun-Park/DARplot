@@ -29,10 +29,27 @@ head(cad_gwas)
 ```
 ## Basic Manhattan plot
 
+```{r,cache=TRUE}
+library(DARplot)
+data(add_gwas)
+cad_gwas$y=-log10(cad_gwas$pval)
+head(cad_gwas)
+```
+
 ## TheraDarplot
+
+```{r,cache=TRUE}
+library(DARplot)
+data(add_gwas)
+cad_gwas$y=-log10(cad_gwas$pval)
+head(cad_gwas)
+```
 
 ## Plotting multiple GWAS studies
 
 ## Details
 
 ## Tabling
+To install `tabling`, use the standard R package installation command.
+```# install.packages('DARplot')
+```
