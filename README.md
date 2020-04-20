@@ -5,7 +5,10 @@ Our results indicate that the combining methods of **three mode GWAS results** s
 the significant and replicative results and reduce the substantial loss of power. Based on our study, 
 we implemented a R package named 
 **TheraDARPLOT** **(Dominance, Additive and Recessive combined Plot).** 
+
+## Introduction
 The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
+![Alt text](/Dahyun-Park/Darplot.jpg)
 
 ## Installation
 To install `Darplot`, use the standard R package installation command.
@@ -13,12 +16,17 @@ To install `Darplot`, use the standard R package installation command.
 ```{r}
 # install.packages('Darplot')
 ```
-
-## Installation
->>
-
 ## Usage
+### Basic Darplot
+To illustate its usage, let us plot the coronary artery disease GWAS based on *Deloukas et al*(2013). The original dataset provides nominal p-values. Since we want to plot the $-log_{10}(P\text{-}value)$, let us take the logarithm.  
 
+
+```{r,cache=TRUE}
+library(manhattan)
+data(cad_gwas)
+cad_gwas$y=-log10(cad_gwas$pval)
+head(cad_gwas)
+```
 ## Basic Manhattan plot
 
 ## TheraDarplot
