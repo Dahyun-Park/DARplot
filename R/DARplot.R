@@ -28,12 +28,12 @@ inputfile <- function(dir) {
     paste(src_dir,"/",src_file[i],sep=""),#cut/cut_chr1.assoc.logistic
     ,header =T,stringsAsFactors = T)
     write.table(rawdata_Set,
-                paste(src_dir,"/","merge.tsv",sep = ""),
-                sep = "\t",
-                row.names = FALSE,
-                col.names = FALSE,
-                quote = FALSE,
-                append = TRUE) #append-> stacking
+               paste(src_dir,"/","merge.tsv",sep = ""),
+               sep = "\t",
+               row.names = FALSE,
+               col.names = FALSE,
+               quote = FALSE,
+               append = TRUE) #append-> stacking
     rm(rawdata_Set)
     }
   a<-read.csv("merge.tsv",sep = '\t',header=F)
@@ -46,7 +46,7 @@ inputfile <- function(dir) {
               col.names = TRUE,
               append = TRUE,
               quote = FALSE)
-  rm(merge)
+  rm(a)
   
 }
 
