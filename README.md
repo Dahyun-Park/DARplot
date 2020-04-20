@@ -1,6 +1,6 @@
 # DARplot
 ## A high-quality visualization of three genetic models plots using genome-wide association data
-
+### soft mode
 # Installation
 
 # Usage
