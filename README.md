@@ -14,7 +14,7 @@ The R package DAR-PLOT facilitates the evaluation and visualization of the highe
 To install `Darplot`, use the standard R package installation command.
 
 ```{r}
-# install.packages('Darplot')
+# install.packages('DARplot')
 ```
 ## Usage
 ### Basic Darplot
@@ -22,8 +22,8 @@ To illustate its usage, let us plot the coronary artery disease GWAS based on *D
 
 
 ```{r,cache=TRUE}
-library(manhattan)
-data(cad_gwas)
+library(DARplot)
+data(add_gwas)
 cad_gwas$y=-log10(cad_gwas$pval)
 head(cad_gwas)
 ```
