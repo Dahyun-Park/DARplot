@@ -6,17 +6,19 @@ the significant and replicative results and reduce the substantial loss of power
 we implemented a R package named **TheraDARPLOT** **(Dominance, Additive and Recessive combined Plot).** 
 The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
 
-# Installation
+## Introduction
+
+## Installation
 >>
 
-# Usage
+## Usage
 
-# Basic Manhattan plot
+## Basic Manhattan plot
 
-# TheraDarplot
+## TheraDarplot
 
-# Plotting multiple GWAS studies
+## Plotting multiple GWAS studies
 
-# Details
+## Details
 
-# Tabling
+## Tabling
