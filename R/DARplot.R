@@ -28,12 +28,12 @@ inputfile <- function(dir) {
     paste(src_dir,"/",src_file[i],sep=""),#cut/cut_chr1.assoc.logistic
     ,header =T,stringsAsFactors = T)
     write.table(rawdata_Set,
-               paste(src_dir,"/","merge.tsv",sep = ""),
-               sep = "\t",
-               row.names = FALSE,
-               col.names = FALSE,
-               quote = FALSE,
-               append = TRUE) #append-> stacking
+                paste(src_dir,"/","merge.tsv",sep = ""),
+                sep = "\t",
+                row.names = FALSE,
+                col.names = FALSE,
+                quote = FALSE,
+                append = TRUE) #append-> stacking
     rm(rawdata_Set)
     }
   a<-read.csv("merge.tsv",sep = '\t',header=F)
@@ -46,6 +46,42 @@ inputfile <- function(dir) {
               col.names = TRUE,
               append = TRUE,
               quote = FALSE)
+  rm(a)
+  
+}
+
+
+inputfile <- function(dir) {
+  setwd(dir)
+  src_dir <- c(dir)
+  # listing up name of files in the directory => object
+  src_file <- list.files(src_dir) # list
+  # file list 
+  src_file_cnt <- length(src_file)
+  
+  for(i in 1:src_file_cnt){
+    rawdata_Set <- read.table(
+    paste(src_dir,"/",src_file[i],sep=""),#cut/cut_chr1.assoc.logistic
+    ,header =T,stringsAsFactors = T)
+    write.table(rawdata_Set,
+         paste(src_dir,"/","merge.tsv",sep = ""),
+                sep = "\t",
+                row.names = FALSE,
+                col.names = FALSE,
+                quote = FALSE,
+                append = TRUE) #append-> stacking
+         rm(rawdata_Set)
+    }
+  a<-read.csv("merge.tsv",sep = '\t',header=F)
+  colnames(a)<-c("CHR","SNP","BP","A1","TEST","NMISS","OR","SE","L95","U95","STAT","P")
+  a<-a[,-c(4,5,6,7,8,9,10,11)]
+  write.table(a,
+        paste(src_dir,"/","all.tsv",sep = ""),
+        sep = "\t",
+        row.names = FALSE,
+        col.names = TRUE,
+        append = TRUE,
+        quote = FALSE)
   rm(a)
   
 }
