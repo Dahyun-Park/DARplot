@@ -31,8 +31,7 @@ DARplot::inputfile("mydir")
 ## Basic Manhattan plot
 
 ```{r,cache=TRUE}
-ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,kbaway=50
-)
+ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,kbaway=50)
 ```
 
 ## TheraDarplot
@@ -40,23 +39,20 @@ ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,kbaway=50
 ```{r,cache=TRUE}
 ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,
               snplist=c("rs633715","rs6803519","rs62456689","rs651821", "rs568974867"),
-              col=c("green","red","blue")[c(1,3,1,2,3)], kbaway=50
-)
+              col=c("green","red","blue")[c(1,3,1,2,3)], kbaway=50)
 ```
 
 ## Plotting multiple GWAS studies
 ```{r,cache=TRUE}
 ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,
               snplist=c("rs633715","rs6803519","rs62456689","rs651821", "rs568974867"),
-              col=c("green","red","blue")[c(1,3,1,2,3)], kbaway=50
-)
+              col=c("green","red","blue")[c(1,3,1,2,3)], kbaway=50)
 DAR.plot(dar$CHR, dar$BP, dar$P,
                annotate=ann, ann.default=list(label=list(offset=2)),
                sig.level=5e-8,
                key=list(background="white", border=T, padaring.text=3,
                         corner=c(.95, .95, .95), text=list(lab=c("Add","DOM","REC")),
-                        points=list(col=c("red","green","blue"), pch=20))
-)
+                        points=list(col=c("red","green","blue"), pch=20)))
 ```
 
 ## Make png
