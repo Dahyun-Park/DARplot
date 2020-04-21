@@ -8,8 +8,6 @@ we implemented a R package named
 
 **Availability**: TheraDARPLOT is available for free (under the GNU General Public License V3) from git-hub and from the CRAN R package repository cran.r-project.org/web/packages/ TheraDARPLOT/.
 #### **Contact : kyungwon.hong@theragenetex.com or dahyun.park@theragenetex.com**
-Supplementary information : Supplementary data and available at Bioinformatics online.
-
 
 ## Introduction
 The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
