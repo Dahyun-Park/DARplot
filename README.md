@@ -7,7 +7,7 @@ we implemented a R package named
 **TheraDARPLOT** **(Dominance, Additive and Recessive combined Plot).** 
 
 **Availability**: TheraDARPLOT is available for free (under the GNU General Public License V3) from git-hub and from the CRAN R package repository cran.r-project.org/web/packages/ TheraDARPLOT/.
-### **Contact : kyungwon.hong@theragenetex.com or dahyun.park@theragenetex.com**
+#### **Contact : kyungwon.hong@theragenetex.com or dahyun.park@theragenetex.com**
 Supplementary information : Supplementary data and available at Bioinformatics online.
 
 
