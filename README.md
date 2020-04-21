@@ -27,6 +27,7 @@ To illustate its usage, let us plot the coronary artery disease GWAS based on *D
 ```{r,cache=TRUE}
 library(DARplot)
 DARplot::inputfile("mydir")
+dar<-read.csv("all.csv", header=T, as.is=T, sep="\t")
 ```
 ## Basic Manhattan plot
 
