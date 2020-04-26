@@ -20,9 +20,9 @@ To install `Darplot`, use the standard R package installation command.
 # install.packages('DARplot')
 ```
 ## Usage
-### Basic Darplot
-To illustate its usage, let us plot the coronary artery disease GWAS based on *Deloukas et al*(2013). The original dataset provides nominal p-values. Since we want to plot the $-log_{10}(P\text{-}value)$, let us take the logarithm.  
+To illustate its usage, let us plot the T2DM disease GWAS based on *DARPlot*. The original dataset provides nominal p-values. Since we want to plot the $-log_{10}(P\text{-}value)$, let us take the logarithm.  
 
+### Basic Darplot
 
 ```{r,cache=TRUE}
 library(DARplot)
