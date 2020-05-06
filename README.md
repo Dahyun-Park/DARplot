@@ -11,7 +11,7 @@ we implemented a R package named
 
 ## Introduction
 The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
-![new_dm.png](new_dm.png)
+![adddm1.png](adddm1.png)
 
 ## Installation
 To install `Darplot`, use the standard R package installation command.
