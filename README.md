@@ -12,7 +12,7 @@ we implemented a R package named
 ## Introduction
 The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
 
-![add_dm1.png](add_dm1.png)
+![adddm1.png](adddm1.png)
 
 ![dm1.png](dm1.png)
 
