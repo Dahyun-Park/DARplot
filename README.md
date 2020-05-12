@@ -10,10 +10,9 @@ we implemented a R package named
 #### **Contact : kyungwon.hong@theragenetex.com or dahyun.park@theragenetex.com**
 
 ## Introduction
-The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
+#### The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
 
 The genome-wide association studies (GWAS) is usually not known the mode of inheritance (dominance, additive and recessive). Assuming an incorrect mode of inheritance may lead to substantial loss of power.
-
 Figure 1 shows how significant markers are found when a manhattanplot is drawn with an additive model. In the figure below, only 7 significant markers were observed. 
 
 ![adddm1.png](adddm1.png)
