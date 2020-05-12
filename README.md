@@ -80,7 +80,7 @@ DAR.plot(dar$CHR, dar$BP, dar$P,
                points=list(col=c("red","green","blue"), pch=20)))
 ```
 
-## Make png
+## Make TheraDarplot figure file(.png)
 ```
 png("colorchange.png", width=1000, height=450, units="px",pointsize=12)
 dev.off()
