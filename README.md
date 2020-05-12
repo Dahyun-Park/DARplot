@@ -16,11 +16,11 @@ The genome-wide association studies (GWAS) is usually not known the mode of inhe
 
 **Figure 1** shows how significant markers are found when a manhattanplot is drawn with an additive model. In the figure below, only 7 significant markers were observed. 
 
-![adddm1.png](figure1.png)
+![Figure1](adddm1.png)
 
 **Figure2**, drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
 
-![dm1.png](figure2.png)
+![Figure2](dm1.png)
 
 ## Installation
 To install `Darplot`, use the standard R package installation command.
