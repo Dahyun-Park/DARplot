@@ -16,12 +16,12 @@ The genome-wide association studies (GWAS) is usually not known the mode of inhe
 
 ![Figure1](adddm1.png)
 
-**Figure 1** shows significant markers are drawn with an additive model. In the figure1, only 7 significant markers were observed. 
+**Figure 1**shows significant markers are drawn with an additive model. In the figure1, only 7 significant markers were observed. 
 
 
 ![Figure2](dm1.png)
 
-**Figure2**, drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
+**Figure2** drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
 
 ## Installation
 To install `Darplot`, use the standard R package installation command.
