@@ -13,13 +13,14 @@ we implemented a R package named
 #### The R package DAR-PLOT facilitates the evaluation and visualization of the highest p-values among the three genetic models.
 
 The genome-wide association studies (GWAS) is usually not known the mode of inheritance (dominance, additive and recessive). Assuming an incorrect mode of inheritance may lead to substantial loss of power.
-Figure 1 shows how significant markers are found when a manhattanplot is drawn with an additive model. In the figure below, only 7 significant markers were observed. 
 
-![adddm1.png](adddm1.png)
+**Figure 1** shows how significant markers are found when a manhattanplot is drawn with an additive model. In the figure below, only 7 significant markers were observed. 
 
-Figure2, drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
+![adddm1.png](figure1.png)
 
-![dm1.png](dm1.png)
+**Figure2**, drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
+
+![dm1.png](figure2.png)
 
 ## Installation
 To install `Darplot`, use the standard R package installation command.
