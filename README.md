@@ -55,12 +55,17 @@ for (i in sort(unique(mer$CHR))) {
   b = mer %>% filter(CHR == i) %>% select(SNP) %>%as.vector
   a[[i]] = b[y,]
 }
-
+```
 ann<-snpannot(dd$SNP, dd$CHR, dd$BP, dd$P,
               snplist = a ,
               kbaway=100,
 )
 
+```
+ann<-snpannot(dd$SNP, dd$CHR, dd$BP, dd$P,
+              snplist = a ,
+              kbaway=100,
+)
 ```
 
 ## Plotting TheraDarplot(Three genetic models)
