@@ -22,20 +22,21 @@ To install `Darplot`, use the standard R package installation command.
 ## Usage
 To illustate its usage, let us plot the T2DM disease GWAS based on *DARPlot*. The original dataset provides nominal p-values. Since we want to plot the $-log_{10}(P\text{-}value)$, let us take the logarithm.  
 
-### Basic Darplot
+### Load the library
 
 ```{r,cache=TRUE}
+library(lattice)
+library(dplyr)
 library(DARplot)
+```
+## Prepare Darplot input file
+
+```{r,cache=TRUE}
 DARplot::inputfile("mydir")
 dar<-read.csv("all.csv", header=T, as.is=T, sep="\t")
 ```
-## Basic Manhattan plot
 
-```{r,cache=TRUE}
-ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,kbaway=50)
-```
-
-## TheraDarplot
+## Self annotation TheraDarplot
 
 ```{r,cache=TRUE}
 ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,
@@ -43,15 +44,35 @@ ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,
               col=c("green","red","blue")[c(1,3,1,2,3)], kbaway=50)
 ```
 
-## Plotting multiple GWAS studies
+## function annotation TheraDarplot
+
+```{r,cache=TRUE}
+mer<- filter(dd, P <=5*10e-8 )
+a = list()
+for (i in sort(unique(mer$CHR))) {
+  x = mer %>% filter(CHR == i) %>% select(P)
+  y = which(x == min(x))
+  b = mer %>% filter(CHR == i) %>% select(SNP) %>%as.vector
+  a[[i]] = b[y,]
+}
+
+ann<-snpannot(dd$SNP, dd$CHR, dd$BP, dd$P,
+              snplist = a ,
+              kbaway=100,
+)
+
+```
+
+## Plotting TheraDarplot(Three genetic models)
 
 ```
 DAR.plot(dar$CHR, dar$BP, dar$P,
                annotate=ann, ann.default=list(label=list(offset=2)),
                sig.level=5e-8,
+               sug.level=1e-5,
                key=list(background="white", border=T, padaring.text=3,
-                        corner=c(.95, .95, .95), text=list(lab=c("Add","DOM","REC")),
-                        points=list(col=c("red","green","blue"), pch=20)))
+               corner=c(.95, .95, .95), text=list(lab=c("Add","DOM","REC")),
+               points=list(col=c("red","green","blue"), pch=20)))
 ```
 
 ## Make png
@@ -61,7 +82,8 @@ dev.off()
 
 ```
 
-## Tabling
+## Show a comparison Tabling(add,dom,rec)
+
 To install `tabling`, use the standard R package installation command.
 ```
 library(DARplot)
