@@ -69,19 +69,14 @@ top<-do.call(rbind, a)
 top$TEST <- recode(top$TEST, "ADD" = "black", "DOM" = "darkgreen", "REC" = "red")
 color<-top$TEST
 snpid<-top$SNP
-
-ann<-annotateSNPRegions(dd$SNP, dd$CHR, dd$BP, dd$P,
-        snplist= snpid,
-        col= color,
-        kbaway=1000
-)
 ```
 Find the highest significant SNP for each chromosome. If it is an add model, it draws a black column, when it is a dom model, it draws a green column, and when it is a rec model, it draws a red column. 
 
 ```
-ann<-snpannot(dd$SNP, dd$CHR, dd$BP, dd$P,
-              snplist = a ,
-              kbaway=100,
+ann<-annotateSNPRegions(dd$SNP, dd$CHR, dd$BP, dd$P,
+        snplist= snpid,
+        col= color,
+        kbaway=1000
 )
 ```
 
