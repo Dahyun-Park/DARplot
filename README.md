@@ -54,7 +54,7 @@ ann<-snpannot(dar$SNP, dar$CHR, dar$BP, dar$P,
               col=c("green","red","blue")[c(1,3,1,2,3)], kbaway=50)
 ```
 
-## function annotation TheraDarplot
+## Functional annotation(selected top snp & plot color)
 
 ```{r,cache=TRUE}
 mer<- filter(dd, P <=5*10e-8 )
