@@ -55,31 +55,33 @@ tabling<- function(dir,add_file,dom_file,rec_file){
 
 
 inputfile <- function(dir) {
-  setwd(dir)
   src_dir <- c(dir)
   # listing up name of files in the directory => object
   src_file <- list.files(src_dir) # list
-  # file list 
+  # file list
   src_file_cnt <- length(src_file)
   
   for(i in 1:src_file_cnt){
     rawdata_Set <- read.table(
-    paste(src_dir,"/",src_file[i],sep=""),#cut/cut_chr1.assoc.logistic
-    ,header =T,stringsAsFactors = T)
+      paste(src_dir,"/",src_file[i],sep=""),#cut/cut_chr1.assoc.logistic
+      ,header =T,row.names = NULL,stringsAsFactors = T)
     write.table(rawdata_Set,
                 paste(src_dir,"/","merge.tsv",sep = ""),
                 sep = "\t",
                 row.names = FALSE,
-                col.names = FALSE,
+                col.names = TRUE,
                 quote = FALSE,
                 append = TRUE) #append-> stacking
     rm(rawdata_Set)
-    }
-  a<-read.csv("merge.tsv",sep = '\t',header=F)
-  colnames(a)<-c("CHR","SNP","BP","A1","TEST","NMISS","OR","SE","L95","U95","STAT","P")
-  a<-a[,-c(4,5,6,7,8,9,10,11)]
-  write.table(a,
-              paste(src_dir,"/","all.tsv",sep = ""),
+  }
+    setwd(src_dir)
+  a<-read.table("merge.tsv",sep="\t",header=T,quote="")
+  a<-na.omit(a)
+  a<-a %>% select(CHR, SNP, BP, TEST, P)
+  #colnames(a)<-c("CHR","SNP","BP","A1","TEST","NMISS","OR","SE","L95","U95","STAT","P")
+  #a<-a[,-c(4,6,7,8,9,10,11)]
+  #a<-na.omit(a)
+  write.table(a,paste(src_dir,"/","dar.tsv",sep = ""),
               sep = "\t",
               row.names = FALSE,
               col.names = TRUE,
@@ -88,7 +90,6 @@ inputfile <- function(dir) {
   rm(a)
   
 }
-
 
 inputfile <- function(dir) {
   setwd(dir)
