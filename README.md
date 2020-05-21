@@ -43,7 +43,7 @@ library(dplyr)
 
 ```{r,cache=TRUE}
 DARplot::inputfile("mydir")
-dar<-read.csv("all.csv", header=T, as.is=T, sep="\t")
+dar<-read.csv("dar.tsv", header=T, as.is=T, sep="\t")
 ```
 
 ## Self annotation TheraDarplot
@@ -65,6 +65,16 @@ for (i in sort(unique(mer$CHR))) {
   b = mer %>% filter(CHR == i) %>% select(SNP) %>%as.vector
   a[[i]] = b[y,]
 }
+top<-do.call(rbind, a)
+top$TEST <- recode(top$TEST, "ADD" = "black", "DOM" = "darkgreen", "REC" = "red")
+color<-top$TEST
+snpid<-top$SNP
+
+ann<-annotateSNPRegions(dd$SNP, dd$CHR, dd$BP, dd$P,
+        snplist= snpid,
+        col= color,
+        kbaway=1000
+)
 ```
 Find the highest significant SNP for each chromosome. If it is an add model, it draws a black column, when it is a dom model, it draws a green column, and when it is a rec model, it draws a red column. 
 
