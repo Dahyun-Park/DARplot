@@ -28,7 +28,7 @@ To install `Darplot`, use the standard R package installation command.
 
 ```{r}
 # devtools::install_github("Dahyun-Park/DARplot")
-# install.packages('DARplot')
+# library(DARplot)
 ```
 ## Usage
 To illustate its usage, let us plot the T2DM disease GWAS based on *DARPlot*. The original dataset provides nominal p-values. Since we want to plot the $-log_{10}(P\text{-}value)$, let us take the logarithm.  
@@ -38,7 +38,6 @@ To illustate its usage, let us plot the T2DM disease GWAS based on *DARPlot*. Th
 ```{r,cache=TRUE}
 library(lattice)
 library(dplyr)
-library(DARplot)
 ```
 ## Prepare Darplot input file
 
