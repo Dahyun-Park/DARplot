@@ -27,6 +27,7 @@ The genome-wide association studies (GWAS) is usually not known the mode of inhe
 To install `Darplot`, use the standard R package installation command.
 
 ```{r}
+# devtools::install_github("Dahyun-Park/DARplot")
 # install.packages('DARplot')
 ```
 ## Usage
