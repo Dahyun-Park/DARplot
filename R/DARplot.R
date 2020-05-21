@@ -14,6 +14,45 @@
 #   Test Package:              'Ctrl + Shift + T'
 
 #######################################################tabling#############################################################
+tabling<- function(dir,add_file,dom_file,rec_file){
+  src_dir <- c(dir)
+  add_file <- c(add_file)
+  dom_file <-c(dom_file)
+  rec_file <-c(rec_file)
+
+  add <-read.table(paste(src_dir,"/",add_file,sep=""),sep="\t",header=T)
+  dom <-read.table(paste(src_dir,"/",dom_file,sep=""),sep="\t",header=T)
+  rec <-read.table(paste(src_dir,"/",rec_file,sep=""),sep="\t",header=T)
+
+  #a = city$SNP;a = a %>% unique()
+  #b = noncity$SNP;b = b %>% unique()
+  #c = ansan$SNP;c = c %>% unique()
+  #d = Reduce(intersect, list(a,b,c))
+
+##################################P-value오름차순#######################
+
+  add=arrange(add,add$P,add$CHR)
+  dom=arrange(dom,dom$P,dom$CHR)
+  rec=arrange(rec,rec$P,rec$CHR)
+
+  mer1<-merge(dom,rec,by=c("SNP"),all.add=T)
+  mer2<-merge(mer1,add,by=c("SNP"),all.mer1=T)
+
+  mer<- filter(mer2, P <= 5e-08 | P.x <= 5e-08 | P.y <= 5e-08)
+
+  tabled<-mer %>% select(SNP , CHR , BP , TEST , P , TEST.x , P.x ,TEST.y , P.y)
+
+
+  write.table(tabled,
+              paste(src_dir,"/","tabletest.csv",sep = ""),
+              sep = "\t",
+              row.names = FALSE,
+              col.names = TRUE,
+              append = TRUE,
+              quote = FALSE)
+  rm(tabled)
+}
+
 
 inputfile <- function(dir) {
   setwd(dir)
