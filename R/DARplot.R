@@ -76,7 +76,7 @@ inputfile <- function(dir) {
     rm(rawdata_Set)
   }
   setwd(src_dir)
-  a<-read.table("merge.tsv",sep="\t",header=T)
+  a<-read.table("merge.tsv",sep="\t",header=T,row.names = NULL,stringsAsFactors = T)
   a<-na.omit(a)
   a<-a %>% select(CHR, SNP, BP, TEST, P)
 
