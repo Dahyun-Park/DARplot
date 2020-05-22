@@ -104,11 +104,10 @@ dev.off()
 To install `tabling`, use the standard R package installation command.
 ```
 library(DARplot)
-DARplot::tabling("mydir","add_file","dom_file","rec_file")
 ```
 
 ```
-**Figure3** Tableing by TheraDarplot shows the top significant SNP each models.
+DARplot::tabling("mydir","add_file","dom_file","rec_file")
 ```
 
 ![Figure3](significant_SNP_table.png)
