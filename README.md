@@ -23,6 +23,12 @@ The genome-wide association studies (GWAS) is usually not known the mode of inhe
 
 **Figure2** drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
 
+## Pipline
+
+![Figure3](DARplot_pipline.png)
+
+**Figure 3**The figure shows a working pipeline of a DARplot.
+
 ## Installation
 To install `Darplot`, use the standard R package installation command.
 
