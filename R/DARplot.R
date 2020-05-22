@@ -78,9 +78,7 @@ inputfile <- function(dir) {
   a<-read.table("merge.tsv",sep="\t",header=T,quote="")
   a<-na.omit(a)
   a<-a %>% select(CHR, SNP, BP, TEST, P)
-  #colnames(a)<-c("CHR","SNP","BP","A1","TEST","NMISS","OR","SE","L95","U95","STAT","P")
-  #a<-a[,-c(4,6,7,8,9,10,11)]
-  #a<-na.omit(a)
+
   write.table(a,paste(src_dir,"/","dar.tsv",sep = ""),
               sep = "\t",
               row.names = FALSE,
