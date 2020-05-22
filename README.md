@@ -1,5 +1,9 @@
 # TheraDARPLOT 
 ## **TheraDARPLOT:** A high-quality visualization of three genetic models plots using genome-wide association data
+![Figure1](DARplot_pipline.png)
+
+**Figure 1**The figure shows a working pipeline of a DARplot.
+
 The [**TheraDarplot**](https://github.com/Dahyun-Park/DARplot/) is a specialized form of scatterplot to display **genome-wide association studies (GWAS)** of three genetic models (Dominance, Additive and Recessive). 
 Our results indicate that the combining methods of **three mode GWAS results** should increase the opportunity 
 the significant and replicative results and reduce the substantial loss of power. Based on our study, 
@@ -14,20 +18,15 @@ we implemented a R package named
 
 The genome-wide association studies (GWAS) is usually not known the mode of inheritance (dominance, additive and recessive). Assuming an incorrect mode of inheritance may lead to substantial loss of power.
 
-![Figure1](adddm1.png)
+![Figure2](adddm1.png)
 
-**Figure 1**shows significant markers are drawn with an additive model. In the figure1, only 7 significant markers were observed. 
+**Figure 2**shows significant markers are drawn with an additive model. In the figure1, only 7 significant markers were observed. 
 
 
-![Figure2](dm1.png)
+![Figure3](dm1.png)
 
-**Figure2** drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
+**Figure3** drawn by TheraDarplot shows the total 9 SNPs siginifianct markers that do not appear significantly in the additive model add significant markers when the Dominant and Recessive models
 
-## Pipline
-
-![Figure3](DARplot_pipline.png)
-
-**Figure 3**The figure shows a working pipeline of a DARplot.
 
 ## Installation
 To install `Darplot`, use the standard R package installation command.
@@ -116,7 +115,7 @@ library(DARplot)
 DARplot::tabling("mydir","add_file","dom_file","rec_file")
 ```
 
-![Figure3](significant_SNP_table.png)
+![Figure4](significant_SNP_table.png)
 
-**Figure3** Tableing by TheraDarplot shows the top significant SNP each models.
+**Figure4** Tableing by TheraDarplot shows the top significant SNP each models.
 
