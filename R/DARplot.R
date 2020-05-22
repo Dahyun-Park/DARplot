@@ -74,7 +74,7 @@ inputfile <- function(dir) {
                 append = TRUE) #append-> stacking
     rm(rawdata_Set)
   }
-    setwd(src_dir)
+  setwd(src_dir)
   a<-read.table("merge.tsv",sep="\t",header=T,quote="")
   a<-na.omit(a)
   a<-a %>% select(CHR, SNP, BP, TEST, P)
@@ -130,7 +130,7 @@ annotSNP<-function(snps, chr, pos, pvalue, snplist,
 
 
 DAR.plot<-function(chr, pos, pvalue,
-                   sig.level=NA, annotate=NULL, ann.default=list(),
+                   sig.level=NA, sug.level=NA, annotate=NULL, ann.default=list(),
                    should.thin=T, thin.pos.places=2, thin.logp.places=2,
                    xlab="Chromosome", ylab=expression(-log[10](p-value)),
                    col=c("gray","skyblue"), panel.extra=NULL, pch=20, cex=0.8,...) {
@@ -271,7 +271,7 @@ DAR.plot<-function(chr, pos, pvalue,
   #make sure the y-lim covers the range (plus a bit more to look nice)
   prepanel.chr<-function(x,y,...) {
     A<-list();
-    maxy<-ceiling(max(y, ifelse(!is.na(sig.level), -log10(sig.level), 0)))+.5;
+    maxy<-ceiling(max(y, ifelse(!is.na(sig.level), -log10(sig.level), 0)))+2.5;
     A$ylim=c(0,maxy);
     A;
   }
@@ -283,6 +283,10 @@ DAR.plot<-function(chr, pos, pvalue,
            if(!is.na(sig.level)) {
              #add significance line (if requested)
              panel.abline(h=-log10(sig.level), lty=2);
+           }
+           if(!is.na(sug.level)) {
+             #add suggestive line (if requested)
+             panel.abline(h=-log10(sug.level), lty=2);
            }
            panel.superpose(x, y, ..., getgenpos=getgenpos);
            if(!is.null(panel.extra)) {
@@ -327,6 +331,4 @@ DAR.plot<-function(chr, pos, pvalue,
   );
   print("all end")
 }
-
-
 
