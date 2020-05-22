@@ -48,6 +48,7 @@ library(dplyr)
 
 ```{r,cache=TRUE}
 DARplot::inputfile("mydir")
+setwd("mydir") #Located dar.tsv file
 dar<-read.csv("dar.tsv", header=T, as.is=T, sep="\t")
 ```
 
