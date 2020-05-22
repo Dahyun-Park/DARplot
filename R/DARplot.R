@@ -29,7 +29,7 @@ tabling<- function(dir,add_file,dom_file,rec_file){
   #c = ansan$SNP;c = c %>% unique()
   #d = Reduce(intersect, list(a,b,c))
 
-##################################P-value오름차순#######################
+##################################P-value arrange#######################
 
   add=arrange(add,add$P,add$CHR)
   dom=arrange(dom,dom$P,dom$CHR)
@@ -53,6 +53,7 @@ tabling<- function(dir,add_file,dom_file,rec_file){
   rm(tabled)
 }
 
+#########################################creat input file #######################################
 
 inputfile <- function(dir) {
   src_dir <- c(dir)
@@ -75,7 +76,7 @@ inputfile <- function(dir) {
     rm(rawdata_Set)
   }
   setwd(src_dir)
-  a<-read.table("merge.tsv",sep="\t",header=T,quote="")
+  a<-read.table("merge.tsv",sep="\t",header=T)
   a<-na.omit(a)
   a<-a %>% select(CHR, SNP, BP, TEST, P)
 
