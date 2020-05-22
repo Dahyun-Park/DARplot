@@ -2,7 +2,7 @@
 ## **TheraDARPLOT:** A high-quality visualization of three genetic models plots using genome-wide association data
 ![Figure1](DARplot_pipline.png)
 
-**Figure 1**The figure shows a working pipeline of a DARplot.
+**Figure 1.** The figure shows a working pipeline of a TheraDARplot.
 
 The [**TheraDarplot**](https://github.com/Dahyun-Park/DARplot/) is a specialized form of scatterplot to display **genome-wide association studies (GWAS)** of three genetic models (Dominance, Additive and Recessive). 
 Our results indicate that the combining methods of **three mode GWAS results** should increase the opportunity 
