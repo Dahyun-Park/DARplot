@@ -107,7 +107,11 @@ library(DARplot)
 DARplot::tabling("mydir","add_file","dom_file","rec_file")
 ```
 
-![Figure3](tabling.png)
+```
+**Figure3** Tableing by TheraDarplot shows the top significant SNP each models.
+```
+
+![Figure3](significant_SNP_table.png)
 
 **Figure3** Tableing by TheraDarplot shows the top significant SNP each models.
 
