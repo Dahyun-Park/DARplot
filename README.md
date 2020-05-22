@@ -63,7 +63,7 @@ ann<-annotSNP(dar$SNP, dar$CHR, dar$BP, dar$P,
 ## Functional annotation(selected top snp & plot color)
 
 ```{r,cache=TRUE}
-mer<- filter(dd, P <=5*10e-8 )
+mer<- filter(dar, P <=5*10e-8 )
 a = list()
 for (i in sort(unique(mer$CHR))) {
   x = mer %>% filter(CHR == i) %>% select(P)
@@ -79,7 +79,7 @@ snpid<-top$SNP
 Find the highest significant SNP for each chromosome. If it is an add model, it draws a black column, when it is a dom model, it draws a green column, and when it is a rec model, it draws a red column. 
 
 ```
-ann<-annotSNP(dd$SNP, dd$CHR, dd$BP, dd$P,
+ann<-annotSNP(dar$SNP, dar$CHR, dar$BP, dar$P,
         snplist= snpid,
         col= color,
         kbaway=1000
