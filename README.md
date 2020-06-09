@@ -1,6 +1,6 @@
 # TheraDARPLOT 
 ## **TheraDARPLOT:** A high-quality visualization of three genetic models plots using genome-wide association data
-![Figure1](SupplementaryFig.S1)
+![Figure1](SupplementaryFig.S1.png)
 
 **Figure 1.** The figure shows a working pipeline of a TheraDARplot.
 
