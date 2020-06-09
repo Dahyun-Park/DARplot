@@ -18,7 +18,7 @@ we implemented a R package named
 
 The genome-wide association studies (GWAS) is usually not known the mode of inheritance (dominance, additive and recessive). Assuming an incorrect mode of inheritance may lead to substantial loss of power.
 
-![Figure2](adddm1.png)
+![Figure2](new_adddm1.png)
 
 **Figure 2**shows significant markers are drawn with an additive model. In the figure1, only 7 significant markers were observed. 
 
