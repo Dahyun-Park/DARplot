@@ -59,7 +59,7 @@ inputfile <- function(dir) {
   src_dir <- c(dir)
   # listing up name of files in the directory => object
   src_file <- list.files(src_dir) # list
-  # file list
+  # file list src_file_cnt
   src_file_cnt <- length(src_file)
   
   for(i in 1:src_file_cnt){
@@ -75,7 +75,6 @@ inputfile <- function(dir) {
                 append = TRUE) #append-> stacking
     rm(rawdata_Set)
   }
-  setwd(src_dir)
   a<-read.table("merge.tsv",sep="\t",header=T,row.names = NULL,stringsAsFactors = T)
   a<-na.omit(a)
   a<-a %>% select(CHR, SNP, BP, TEST, P)
