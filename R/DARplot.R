@@ -65,7 +65,7 @@ inputfile <- function(dir) {
   for(i in 1:src_file_cnt){
     rawdata_Set <- read.table(
     paste(src_dir,"/",src_file[i],sep=""),#cut/cut_chr1.assoc.logistic
-    header =T,row.names = NULL,stringsAsFactors = T)
+    header =T,row.names = NULL,stringsAsFactors = T, fill=TRUE)
     write.table(rawdata_Set,
                 paste(src_dir,"/","merge.tsv",sep = ""),
                 sep = "\t",
