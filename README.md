@@ -47,7 +47,7 @@ library(dplyr)
 ## Prepare Darplot input file
 
 ```{r,cache=TRUE}
-DARplot::inputfile("mydir")
+DARplot::inputfile("mydir") #3files(Add,Dom,Res) will be located one directory('mydir') 
 setwd("mydir") #Located dar.tsv file
 dar<-read.csv("dar.tsv", header=T, as.is=T, sep="\t")
 ```
